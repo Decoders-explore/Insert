@@ -1,3 +1,0 @@
-libgstreamer1.0.0
-libglu1
-libusb-1.0.0
