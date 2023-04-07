@@ -1,0 +1,6 @@
+tflite_support
+opencv_python_headless
+
+numpy
+tensorflow
+streamlit
