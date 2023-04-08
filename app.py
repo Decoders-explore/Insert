@@ -10,9 +10,6 @@ st.set_page_config(page_title='Virtue', page_icon = 'assets/images/logo.png')
 st.title("Virtue Image")
 st.write("Just Upload your Plant's Leaf Image and get predictions if the plant is healthy or not") 
 
-
-
-
 model = tf.keras.models.load_model('model.h5')
 
 
@@ -32,7 +29,7 @@ if uploaded_file is not None:
     
     predictions = np.argmax(predictions_arr)
 
-    result_text = f'The plant leaf {predictions_map[predictions]}'
+    result_text = f'The plant leaf {predictions_map[predictions]} with {int(predictions_arr[0][predictions]*100)}% probability'
 
     if predictions == 0:
         st.success(result_text)
